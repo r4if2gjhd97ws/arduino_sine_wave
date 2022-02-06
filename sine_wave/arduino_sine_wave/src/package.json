@@ -1,7 +1,6 @@
 {
   "name": "src",
   "version": "1.0.0",
-  "description": "",
   "main": "led.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +8,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "johnny-five": "^2.1.0",
+    "nan": "^2.15.0",
+    "serialport": "^9.2.8",
     "typescript": "^4.5.5"
-  }
+  },
+  "description": ""
 }
