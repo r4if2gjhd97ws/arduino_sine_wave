@@ -2,6 +2,8 @@
 #include <Oscil.h>               // Oscillator template
 #include <tables/sin2048_int8.h> // sine table for oscillator
 
+// OUTPUT : Pin gnd ~ Pin 25
+
 Oscil<SIN2048_NUM_CELLS, AUDIO_RATE> aSin(SIN2048_DATA);
 
 // use #define for CONTROL_RATE, not a constant
@@ -17,10 +19,12 @@ void updateControl()
 {
 }
 
-AudioOutput_t updateAudio() {
-  return Mono
+AudioOutput_t updateAudio()
+{
+  return MonoOutput::from8Bit(aSin.next());
 }
 
 void loop()
 {
+  audioHook();
 }
