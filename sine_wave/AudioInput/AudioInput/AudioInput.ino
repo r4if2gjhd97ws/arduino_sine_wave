@@ -1,7 +1,9 @@
 
 #include <MozziGuts.h>
 #include <Arduino.h>
-#define USE_AUDIO_INPUT true
+
+//#define USE_AUDIO_INPUT true
+
 void setup()
 {
   Serial.begin(115200);
